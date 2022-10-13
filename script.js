@@ -12,11 +12,10 @@ allRange.forEach(range => {
 
         box.style.backgroundColor = `rgba(${red},${green}, ${blue}, ${alpha})`;
         colorText.value = `background-color: rgba(${red}, ${green}, ${blue}, ${alpha})`;
-
-        btnCopy.addEventListener("click", () => {
+    })
+})
+ btnCopy.addEventListener("click", () => {
             colorText.setSelectionRange(0, 99999);
             navigator.clipboard.writeText(colorText.value);
             alert("Copied the text: " + colorText.value);
-        })
-    })
 })
